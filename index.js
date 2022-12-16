@@ -135,7 +135,7 @@ function BiggestNumberInArray(changesArray) {
     return Math.max.apply(Math, changesArray);
 }
 
-console.log("Greatest Increase in Profits: " + BiggestNumberInArray(changesArray));
+// console.log("Greatest Increase in Profits: " + BiggestNumberInArray(changesArray));
 
 //Selects the smallest number in the array (e.g. the biggest loss)
 function SmallestNumberInArray(changesArray) {
@@ -146,31 +146,23 @@ function SmallestNumberInArray(changesArray) {
 // converts the smallest number to an actual number (numerical value) 
 var SmallestNumber = (+SmallestNumberInArray(changesArray))  
 // console.log(SmallestNumber)
+var BiggestNumber = (+BiggestNumberInArray(changesArray))
+// console.log(BiggestNumber)
 
 // Find where a value is indexed in an Array - index of
 
-var CorrospondingArrayIndex = (+changesArray.indexOf(SmallestNumber)) 
-    // console.log(CorrospondingArrayIndex)
-    // console.log(changesArray.indexOf(SmallestNumber))
+var SmallestArrayIndex = (+changesArray.indexOf(SmallestNumber));
 
-//find the corrosponding month 
+var BiggestArrayIndex =(+changesArray.indexOf(BiggestNumber));
 
-var CorrospondingMonth = (+CorrospondingArrayIndex+1)
-    console.log("Greatest Decrease in Profits: " + NewArrayDates[CorrospondingMonth] + " £" + (SmallestNumber))
+//find the corrosponding month from the dates array
 
+var CorrospondingMonthProfit = (+BiggestArrayIndex+1)
+    console.log("Greatest Increase in Profits: " + NewArrayDates[CorrospondingMonthProfit] + " £" + (BiggestNumber));
 
+var CorrospondingMonthLoss = (+SmallestArrayIndex+1)
+    console.log("Greatest Decrease in Profits: " + NewArrayDates[CorrospondingMonthLoss] + " £" + (SmallestNumber));
 
-
-
-
-
-
-// console.log(NewArrayMoney)
-
-// for (let i = 0; i < NewArrayMoney.length; i++) {
-
-
-// }
 
 // calculate the change from month to month 
 // subtract previous month from current month
