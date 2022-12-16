@@ -87,15 +87,23 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-
-How to add up all the incidence of strings in an Array else.g. total months
-
-
-
-var TotalMonths = 
+NewArrayMoney = finances.map(a => a [1])
+// console.log(NewArray)
 
 
-console.log()
+ 
+console.log ("Financial Analysis")
+console.log ("------------------------------") 
+console.log("Total Months: " + finances.length);
+ 
+
+let TotalSum = 0;
+
+for (let i = 0; i < NewArrayMoney.length; i++) {
+    TotalSum += NewArrayMoney[i];
+}
+
+console.log("Total Sum is: £" + TotalSum); 
 
 
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
