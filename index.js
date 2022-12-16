@@ -102,32 +102,25 @@ for (let i = 0; i < NewArrayMoney.length; i++) {
 
 console.log("Total Sum is: £" + TotalSum); 
 
-const changesArray = []
+var changesArray = []
 
-// var changes = NewArrayMoney[1] - NewArrayMoney[0];
-// console.log(changes);
-// changesArray.push (changes);
-
-// var changes = NewArrayMoney[2] - NewArrayMoney [1]
-// console.log(changes);
-// changesArray.push (changes); 
-
-// What you need to repeat to get the code to work out the differences between months.
-
-console.log(changesArray)
+// console.log(changesArray)
     
     for (let i = 0; i < (NewArrayMoney.length-1); i++) {
         var changes = NewArrayMoney[i+1] - NewArrayMoney [i+0]
             changesArray.push (changes);
-                console.log(changes);
+                // console.log(changes);
   
         }
 
-var AvChanges = 0
-        for (let i=0; i < changes.length; i++) {
-            AvChanges += changes[i];
-                console.log(AvChanges);
+var AvChangeProfitLoss = 0; 
+
+        for (let i = 0; i < changesArray.length; i++) {
+                AvChangeProfitLoss += changesArray[i];           
+
         }
+
+console.log(AvChangeProfitLoss / changesArray.length); 
 
     // calculate the average
 
@@ -148,7 +141,15 @@ var AvChanges = 0
 
 // i+1 - i... 
 
+// var changes = NewArrayMoney[1] - NewArrayMoney[0];
+// console.log(changes);
+// changesArray.push (changes);
 
+// var changes = NewArrayMoney[2] - NewArrayMoney [1]
+// console.log(changes);
+// changesArray.push (changes); 
+
+// What you need to repeat to get the code to work out the differences between months.
 
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
