@@ -87,13 +87,16 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+//creates a new array that only contains the numerical values not the strings
 NewArrayMoney = finances.map(a => a [1])   // what does the a => a do??
 // console.log(NewArrayMoney)
 
 console.log ("Financial Analysis");
 console.log ("------------------------------"); 
-console.log("Total Months: " + finances.length);
+//logs the total number of months
+console.log("Total Months: " + finances.length); 
 
+//calculates the total sum of all the months by adding their values incrimentally
 var TotalSum = 0;
 
 for (let i = 0; i < NewArrayMoney.length; i++) {
@@ -102,6 +105,7 @@ for (let i = 0; i < NewArrayMoney.length; i++) {
 
 console.log("Total Sum is: £" + TotalSum); 
 
+
 var changesArray = []
 
 // console.log(changesArray)
@@ -109,20 +113,39 @@ var changesArray = []
     for (let i = 0; i < (NewArrayMoney.length-1); i++) {
         var changes = NewArrayMoney[i+1] - NewArrayMoney [i+0]
             changesArray.push (changes);
-                // console.log(changes);
+                console.log(changes);
   
         }
 
+// calculates the average of all the profits and losses        
 var AvChangeProfitLoss = 0; 
 
         for (let i = 0; i < changesArray.length; i++) {
                 AvChangeProfitLoss += changesArray[i];           
 
         }
+        
+console.log("Average Change: £ " + (AvChangeProfitLoss / changesArray.length)); 
 
-console.log(AvChangeProfitLoss / changesArray.length); 
 
-    // calculate the average
+//selects the biggest nuber in the array (e.g the biggest profit)
+function BiggestNumberInArray(changesArray) {
+    return Math.max.apply(Math, changesArray);
+}
+
+console.log("Greatest Increase in Profits: " + BiggestNumberInArray(changesArray));
+
+//Selects the smallest number in the array (e.g. the biggest loss)
+function SmallestNumberInArray(changesArray) {
+    return Math.min.apply(Math, changesArray);
+}
+
+console.log("Greatest Decrease in Profits: " + SmallestNumberInArray(changesArray))
+
+// How to find where a value is indexed in an Array
+
+
+// look for the greatest increase in the changes array 
 
 
 
@@ -137,9 +160,7 @@ console.log(AvChangeProfitLoss / changesArray.length);
 // subtract previous month from current month
 // maybe put all changes into an array .push
 // total change/(months-1)
-// difference between 1 and 2, 2 and 3, 3 and 4 etc..
 
-// i+1 - i... 
 
 // var changes = NewArrayMoney[1] - NewArrayMoney[0];
 // console.log(changes);
