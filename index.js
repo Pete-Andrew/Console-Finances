@@ -91,6 +91,10 @@ var finances = [
 NewArrayMoney = finances.map(a => a [1])   // what does the a => a do??
 // console.log(NewArrayMoney)
 
+// make an array  of only dates 
+NewArrayDates = finances.map(a => a [0]);
+// console.log(NewArrayDates);
+
 console.log ("Financial Analysis");
 console.log ("------------------------------"); 
 //logs the total number of months
@@ -105,15 +109,13 @@ for (let i = 0; i < NewArrayMoney.length; i++) {
 
 console.log("Total Sum is: £" + TotalSum); 
 
-
+// console.log(changesArray)
 var changesArray = []
 
-// console.log(changesArray)
-    
     for (let i = 0; i < (NewArrayMoney.length-1); i++) {
         var changes = NewArrayMoney[i+1] - NewArrayMoney [i+0]
             changesArray.push (changes);
-                console.log(changes);
+                // console.log(changes);
   
         }
 
@@ -128,7 +130,7 @@ var AvChangeProfitLoss = 0;
 console.log("Average Change: £ " + (AvChangeProfitLoss / changesArray.length)); 
 
 
-//selects the biggest nuber in the array (e.g the biggest profit)
+//selects the biggest number in the array (e.g the biggest profit)
 function BiggestNumberInArray(changesArray) {
     return Math.max.apply(Math, changesArray);
 }
@@ -139,13 +141,27 @@ console.log("Greatest Increase in Profits: " + BiggestNumberInArray(changesArray
 function SmallestNumberInArray(changesArray) {
     return Math.min.apply(Math, changesArray);
 }
+// console.log("Greatest Decrease in Profits: " + SmallestNumberInArray(changesArray))
 
-console.log("Greatest Decrease in Profits: " + SmallestNumberInArray(changesArray))
+// converts the smallest number to an actual number (numerical value) 
+var SmallestNumber = (+SmallestNumberInArray(changesArray))  
+// console.log(SmallestNumber)
 
-// How to find where a value is indexed in an Array
+// Find where a value is indexed in an Array - index of
+
+var CorrospondingArrayIndex = (+changesArray.indexOf(SmallestNumber)) 
+    // console.log(CorrospondingArrayIndex)
+    // console.log(changesArray.indexOf(SmallestNumber))
+
+//find the corrosponding month 
+
+var CorrospondingMonth = (+CorrospondingArrayIndex+1)
+    console.log("Greatest Decrease in Profits: " + NewArrayDates[CorrospondingMonth] + " £" + (SmallestNumber))
 
 
-// look for the greatest increase in the changes array 
+
+
+
 
 
 
