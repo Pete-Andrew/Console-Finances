@@ -87,23 +87,67 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-NewArrayMoney = finances.map(a => a [1])
-// console.log(NewArray)
+NewArrayMoney = finances.map(a => a [1])   // what does the a => a do??
+// console.log(NewArrayMoney)
 
-
- 
-console.log ("Financial Analysis")
-console.log ("------------------------------") 
+console.log ("Financial Analysis");
+console.log ("------------------------------"); 
 console.log("Total Months: " + finances.length);
- 
 
-let TotalSum = 0;
+var TotalSum = 0;
 
 for (let i = 0; i < NewArrayMoney.length; i++) {
     TotalSum += NewArrayMoney[i];
 }
 
 console.log("Total Sum is: £" + TotalSum); 
+
+const changesArray = []
+
+// var changes = NewArrayMoney[1] - NewArrayMoney[0];
+// console.log(changes);
+// changesArray.push (changes);
+
+// var changes = NewArrayMoney[2] - NewArrayMoney [1]
+// console.log(changes);
+// changesArray.push (changes); 
+
+// What you need to repeat to get the code to work out the differences between months.
+
+console.log(changesArray)
+    
+    for (let i = 0; i < (NewArrayMoney.length-1); i++) {
+        var changes = NewArrayMoney[i+1] - NewArrayMoney [i+0]
+            changesArray.push (changes);
+                console.log(changes);
+  
+        }
+
+var AvChanges = 0
+        for (let i=0; i < changes.length; i++) {
+            AvChanges += changes[i];
+                console.log(AvChanges);
+        }
+
+    // calculate the average
+
+
+
+// console.log(NewArrayMoney)
+
+// for (let i = 0; i < NewArrayMoney.length; i++) {
+
+
+// }
+
+// calculate the change from month to month 
+// subtract previous month from current month
+// maybe put all changes into an array .push
+// total change/(months-1)
+// difference between 1 and 2, 2 and 3, 3 and 4 etc..
+
+// i+1 - i... 
+
 
 
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
@@ -118,7 +162,9 @@ console.log("Total Sum is: £" + TotalSum);
 
 // * The greatest increase in profits (date and amount) over the entire period.
 
-// * The greatest decrease in losses (date and amount) over the entire period.
+// check last increase, if it's bigger than 0 track the change and keep track of the biggest one in a loop. 
+
+// * The greatest decrease in profits(date and amount) over the entire period.
 
 // When you open your code in the browser your resulting analysis should look similar to the following:
 
