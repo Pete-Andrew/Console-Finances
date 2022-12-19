@@ -16,4 +16,7 @@ h1 {
     background-size: cover;
     margin-top: 50px;
     
+    border: 10px solid yellow;
+    outline: 5px solid black;
+    
 }

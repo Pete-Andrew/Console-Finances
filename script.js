@@ -126,8 +126,8 @@ var AvChangeProfitLoss = 0;
                 AvChangeProfitLoss += changesArray[i];           
 
         }
-        
-console.log("Average Change: £ " + (AvChangeProfitLoss / changesArray.length)); 
+
+console.log("Average Change: £ " + (AvChangeProfitLoss / changesArray.length).toFixed(2)); 
 
 
 //selects the biggest number in the array (e.g the biggest profit)
