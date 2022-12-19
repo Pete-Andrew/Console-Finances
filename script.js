@@ -163,23 +163,7 @@ var CorrospondingMonthProfit = (+BiggestArrayIndex+1)
 var CorrospondingMonthLoss = (+SmallestArrayIndex+1)
     console.log("Greatest Decrease in Profits: " + NewArrayDates[CorrospondingMonthLoss] + " £" + (SmallestNumber));
 
-
-// calculate the change from month to month 
-// subtract previous month from current month
-// maybe put all changes into an array .push
-// total change/(months-1)
-
-
-// var changes = NewArrayMoney[1] - NewArrayMoney[0];
-// console.log(changes);
-// changesArray.push (changes);
-
-// var changes = NewArrayMoney[2] - NewArrayMoney [1]
-// console.log(changes);
-// changesArray.push (changes); 
-
-// What you need to repeat to get the code to work out the differences between months.
-
+    
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
 // * The total number of months included in the dataset.
